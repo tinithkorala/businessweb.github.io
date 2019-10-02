@@ -19,8 +19,8 @@
                         <img src="./images/ham.svg" alt="toggle menu" class="menu" id="menu">
                     </a>
         
-                    <ul class="show-desktop hide-desktop" id="nav">
-                        <li id="exit" class="exit-btn hide desktop"><img src="./images/exit.svg" alt=""></li>    
+                    <ul class="show-desktop hide-mobile" id="nav">
+                        <li id="exit" class="exit-btn hide-desktop"><img src="./images/exit.svg" alt=""></li>    
                         <li><a href="#">Home</a></li>    
                         <li><a href="#">Services</a></li>    
                         <li><a href="#">Contact</a></li>    
@@ -32,8 +32,8 @@
         <section>
             <img src="./images/server.svg" class="server" alt="">
 
-            <h1>Web hosting for the Modern World</h1>
-            <p class="subhead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, accusamus.</p>
+            <h1>Web Hosting for the Modern World</h1>
+            <p class="subhead">Lorem ipsum dolor sit, amet cing e.</p>
 
             <img src="./images/scroll.svg" class="scroll hide-mobile show-desktop" alt="">
         </section>
@@ -104,5 +104,20 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        var menu = document.getElementById('menu');
+        var nav = document.getElementById('nav');
+        var exit = document.getElementById('exit');
+
+        menu.addEventListener('click', function(e) {
+            nav.classList.toggle('hide-mobile');
+            e.preventDefault();
+        }); 
+        exit.addEventListener('click', function(e) {
+            nav.classList.add('hide-mobile');
+            e.preventDefault();
+        }); 
+    </script>
 </body>
 </html>
